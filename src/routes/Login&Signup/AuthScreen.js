@@ -5,9 +5,8 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useState,useHistory, useContext } from "react"
 import { View, Text, Image, Button,ScrollView, Touchable, TouchableOpacity, useWindowDimensions,StyleSheet,Pressable } from "react-native";
 import { ScreenContainer } from "react-native-screens";
-// import { AuthContext } from "../Context";
 import { CustomInput } from "./Login/CustomInput";
-
+import { AuthContext } from "../Context";
 import { Input } from "./Signup/Input";
 
 
@@ -36,9 +35,9 @@ export const Signup = () => {
 
 export const Login = () => {
 
-// const {login}=useState(AuthContext);
+const {login}=useState(AuthContext);
 
-  // const { height } = useWindowDimensions();
+  const { height } = useWindowDimensions();
 
 
   

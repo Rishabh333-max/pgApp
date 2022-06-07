@@ -5,8 +5,10 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { AuthContext } from "../../Context";
 
 
+
 export const CustomInput = () => {
 
+const {login}=useContext(AuthContext)
     const [hidePass, setHidePass] = useState(true);
     const [input, setInput] = useState({
         email: "",
@@ -55,7 +57,7 @@ export const CustomInput = () => {
      
             </View>
                   
-        <Pressable style={styles.container1} >
+        <Pressable style={styles.container1} onPress={login}>
             <Text style={styles.text}>Login</Text>
         </Pressable>
         
